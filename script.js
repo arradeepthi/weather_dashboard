@@ -97,9 +97,15 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
   `;
         alertBox.classList.remove("d-none");
 
+        // Manual close
         document.querySelector(".close-alert").addEventListener("click", () => {
           alertBox.classList.add("d-none");
         });
+
+        // Auto close after 3 seconds
+        setTimeout(() => {
+          alertBox.classList.add("d-none");
+        }, 3000);
       }
 
       weatherInputDiv.classList.add("d-none");
@@ -181,4 +187,14 @@ resetButton.addEventListener("click", () => {
 
   weatherDataDiv.classList.add("d-none");
   weatherInputDiv.classList.remove("d-none");
+
+  // 👇 Hide weather alert if visible
+  const alertBox = document.querySelector(".weather-alert");
+  alertBox.classList.add("d-none");
+});
+
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.querySelector(".card-inner").classList.toggle("flipped");
+  });
 });

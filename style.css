@@ -235,7 +235,7 @@ body {
   height: 200px;
   width: 150px;
   padding: 0;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .card-inner {
@@ -286,4 +286,20 @@ body {
 
 .card p {
   margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .main-container {
+    align-items: flex-start;
+    padding: 15px;
+  }
+}
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+@media (max-width: 500px) {
+  .alert-content .close-alert {
+    font-size: 2rem;
+    top: 4px;
+    right: 10px;
+  }
 }
