@@ -1,4 +1,3 @@
-/* Base Styles */
 html, body {
   height: 100%;
   margin: 0;
@@ -7,7 +6,6 @@ html, body {
   font-family: "Segoe UI", sans-serif;
 }
 
-/* Header */
 .header {
   background-color: #212529;
   color: white;
@@ -19,18 +17,17 @@ html, body {
   font-size: 2rem;
 }
 
-/* Full Screen Background Container */
 .main-container {
   background-color: #63c5da;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 15px;
+  padding: 0 15px;
   box-sizing: border-box;
+  position: relative;
 }
 
-/* Input Section */
 .weather-input {
   background: white;
   padding: 30px 25px;
@@ -93,7 +90,6 @@ html, body {
   margin-left: 0.75em;
 }
 
-/* Weather Data */
 .weather-data {
   background: #fffdfc;
   padding: 30px;
@@ -110,7 +106,6 @@ html, body {
   opacity: 0;
 }
 
-/* Current Weather */
 .current-weather {
   background: #fcefe9;
   border-left: 5px solid #f6ad55;
@@ -131,7 +126,6 @@ html, body {
   margin: 5px 0;
 }
 
-/* 5-Day Forecast */
 .days-forecast {
   margin-top: 20px;
 }
@@ -151,7 +145,6 @@ html, body {
   list-style: none;
 }
 
-/* Forecast Cards */
 .weather-cards .card {
   background: #e9f6ff;
   border-radius: 15px;
@@ -167,8 +160,6 @@ html, body {
 .weather-cards .card:hover {
   transform: translateY(-5px);
 }
-
-/* Card Flip Styles */
 .card-inner {
   position: relative;
   height: 100%;
@@ -213,7 +204,6 @@ html, body {
   margin: 4px 0;
 }
 
-/* Reset Button */
 .reset-btn {
   font-size: 1rem;
   padding: 10px 20px;
@@ -224,8 +214,6 @@ html, body {
   background-color: #e0e0e0;
   color: #333;
 }
-
-/* Weather Alert */
 .weather-alert {
   max-width: 100%;
   background-color: #fff3cd;
@@ -260,7 +248,6 @@ html, body {
   cursor: pointer;
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -282,12 +269,10 @@ html, body {
   }
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .main-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
+    align-items: flex-start;
+    padding-top: 20vh;
   }
 
   .weather-input {
@@ -313,6 +298,10 @@ html, body {
 }
 
 @media (max-width: 500px) {
+  .main-container {
+    align-items: flex-start;
+    padding-top: 20vh;
+  }
   .search-btn,
   .location-btn {
     font-size: 0.95rem;
