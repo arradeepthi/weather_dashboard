@@ -1,4 +1,4 @@
-#Weather Dashboard
+## Weather Dashboard
 Weather dashboard is a website that provides real-time weather data and a 5-day forecast for any city.
 
 **🔗 [Live Demo](https://arradeepthi.github.io/weather_dashboard/)**
